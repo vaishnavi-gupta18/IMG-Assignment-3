@@ -48,6 +48,10 @@ function req()
             let response = JSON.parse(this.response);
             alert("Form submitted with Json" + response["token"]);
         }
+        else if(this.status===404)
+        alert("Error 404! Page not found!");
+        else if(this.status===400)
+        alert("Error 400! Bad request!");
     }
     
     xhttp.open("POST", "https://reqres.in/api/login", true);

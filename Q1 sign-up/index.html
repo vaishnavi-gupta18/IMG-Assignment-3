@@ -25,14 +25,14 @@
                     <option value="Bachelors">Bachelors</option>
                     <option value="Masters">Masters</option>
                 </select></div> </div>
-            <div class="item" id="name"><div class="l">Name* : </div><div class="r"><input name="fname"></div><div class="ferror l"></div></div>
-            <div class="item" id="phno"><div class="l">Phone no* : </div><div class="r"><input name="fphno"></div><span class="ferror"></span></div>
-            <div class="item" id="age"><div class="l">Age* : </div><div class="r"><input name="fage"></div><span class="ferror"></span></div>
+            <div class="item" id="name"><div class="l">Name* : </div><div class="r"><input name="fname" oninput="name_val()"></div><div class="ferror l"></div></div>
+            <div class="item" id="phno"><div class="l">Phone no* : </div><div class="r"><input name="fphno" oninput="phno_val()"></div><span class="ferror"></span></div>
+            <div class="item" id="age"><div class="l">Age* : </div><div class="r"><input name="fage" oninput="age_val()"></div><span class="ferror" ></span></div>
             <div class="item" id="gender"><div class="l">Gender:</div><div class="r">Male<input type="radio" id="Gender" name="gender">Female<input type="radio" id="Gender" name="gender">Other<input type="radio" id="Gender" name="gender"></div><span class="ferror"></span></div>
-            <div class="item" id="email"><div class="l">Email* : </div><div class="r"><input name="femail"></div><span class="ferror"></span></div>
-            <div class="item" id="pass"><div class="l">Password* : </div><div class="r"><input name="fpass" type="password"></div><span class="ferror"></span></div>
-            <div class="item" id="cpass"><div class="l">Confirm password* : </div><div class="r"><input name="fcpass" type="password"></div><span class="ferror"></span></div>
-            <div class="item" id="city"><div class="l">City : </div><div class="r"><input name="fcity"></div><span class="ferror"></span></div>
+            <div class="item" id="email"><div class="l">Email* : </div><div class="r"><input name="femail" oninput="email_val()"></div><span class="ferror"></span></div>
+            <div class="item" id="pass"><div class="l">Password* : </div><div class="r"><input name="fpass" type="password" oninput="pass_val()"></div><span class="ferror"></span></div>
+            <div class="item" id="cpass"><div class="l">Confirm password* : </div><div class="r"><input name="fcpass" type="password" oninput="cpass_val()"></div><span class="ferror"></span></div>
+            <div class="item" id="city"><div class="l">City* : </div><div class="r"><input name="fcity" onclick="city_val()"></div><span class="ferror"></span></div>
             <div class="head"><input type="submit" value="Sign Up" id="btn"></div>
         </form>
     </div>
