@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS1</title>
+    <style>
+        img{
+            height:500px;
+        }
+        #content{
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+    <script>
+        var i=0;
+        function change(obj)
+        {
+            ++i;
+            switch(i)
+            {
+                case 1:
+                    obj.src="https://scontent.fagr1-1.fna.fbcdn.net/v/t1.6435-9/104494459_10159093296186988_1823532529908830519_n.png?_nc_cat=102&ccb=1-3&_nc_sid=973b4a&_nc_ohc=XdKwDtylWKEAX9KJ8xl&_nc_ht=scontent.fagr1-1.fna&oh=0f702ff552a8967bab710f617f67a9ed&oe=609CD007"
+                    break;
+                case 2:
+                    obj.src="https://scontent.fagr1-1.fna.fbcdn.net/v/t1.6435-9/94225814_10158899012156988_5142509023769133056_n.jpg?_nc_cat=107&ccb=1-3&_nc_sid=973b4a&_nc_ohc=4U_HTc7ucAsAX_8M-Y5&_nc_ht=scontent.fagr1-1.fna&oh=2335b455a5f287bdfc9e4bf74ebad6d4&oe=60995ADA"
+                    break;
+                case 3:
+                    obj.src="https://scontent.fagr1-2.fna.fbcdn.net/v/t1.6435-9/87831827_10158705261016988_9096356187326119936_n.png?_nc_cat=111&ccb=1-3&_nc_sid=973b4a&_nc_ohc=BhgQH1rwR3oAX8FBBxi&_nc_ht=scontent.fagr1-2.fna&oh=e20c450da3d48ec21a9d6f66cbf1b91e&oe=609BA347"
+                    break;
+                case 4:
+                    obj.src="https://scontent.fagr1-2.fna.fbcdn.net/v/t1.6435-9/87025855_10158685854496988_6959980926776377344_n.png?_nc_cat=110&ccb=1-3&_nc_sid=973b4a&_nc_ohc=g-wZKyZEDbMAX8pgRuA&_nc_ht=scontent.fagr1-2.fna&oh=57e4e639de9d0408d5218e4c3d2ad0f0&oe=609BD509"
+                    break;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="content">
+    <img src="https://scontent.fagr1-1.fna.fbcdn.net/v/t31.18172-8/736733_10152067106311988_68620045_o.jpg?_nc_cat=107&ccb=1-3&_nc_sid=973b4a&_nc_ohc=ALlDD9F9SzkAX-sQQhp&_nc_ht=scontent.fagr1-1.fna&oh=07485d4299a34e02358e569804cb891f&oe=609CB923" onclick="change(this)">
+    </div>
+</body>
+</html>

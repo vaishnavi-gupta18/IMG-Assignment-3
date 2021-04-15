@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS1</title>
+</head>
+<body>
+        <h1>Place cursor over sad face to turn it into smiley face</h1>
+        <img src="https://th.bing.com/th/id/Reb10031fc592f574709ce8474f201b66?rik=r5DZZicwP%2fE9Sw&riu=http%3a%2f%2f4.bp.blogspot.com%2f-Xs8_i1sArfg%2fUwyCbF07mSI%2fAAAAAAAAFXE%2f9xKmIFaabYg%2fs1600%2fsad-smiley.png&ehk=gn24zfB35ag3SlmryGfQITi5yKmnmfwOKY5Wb24%2b1hg%3d&risl=&pid=ImgRaw" width="500px" height="500px" id="image">
+    <script>
+        var image=document.getElementById('image')
+        image.addEventListener("mouseover",changeimg)
+        image.addEventListener("mouseout",resetimg)
+        function changeimg()
+        {
+            image.src="https://th.bing.com/th/id/OIP.NKeOPKfRJ5ZLYblc3D4wTAHaHa?pid=ImgDet&rs=1"
+        }
+        function resetimg()
+        {
+            image.src="https://th.bing.com/th/id/Reb10031fc592f574709ce8474f201b66?rik=r5DZZicwP%2fE9Sw&riu=http%3a%2f%2f4.bp.blogspot.com%2f-Xs8_i1sArfg%2fUwyCbF07mSI%2fAAAAAAAAFXE%2f9xKmIFaabYg%2fs1600%2fsad-smiley.png&ehk=gn24zfB35ag3SlmryGfQITi5yKmnmfwOKY5Wb24%2b1hg%3d&risl=&pid=ImgRaw"
+        }
+    </script>
+</body>
+</html>

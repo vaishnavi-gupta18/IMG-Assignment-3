@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS1</title>
+</head>
+<body>
+    <img src="img/Very_sad_emoji_icon_png_large.png" onclick="change(this)">
+    <script>
+       function change(obj)
+       {
+           console.log(obj.src)
+           if(obj.src.match("smile"))
+           {
+               obj.src="img/Very_sad_emoji_icon_png_large.png"
+           }
+           else{
+                obj.src="img/smile.png"
+           }
+       }
+    </script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #content{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        img{
+            width:72px;
+        }
+        .btn{
+            padding:5px;
+            background-color: orange;
+            color:white;
+            border: none;
+            width: 15%;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">  
+    <div id="container">
+    <table>
+    <tbody><tr valign="top" align="center"><td>
+    <img src="img/marble1.jpg" id="pic1" onmouseout="myfunction()" onmouseover="stop()">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <img src="img/marble1.jpg" id="pic2" onmouseout="myfunction()" onmouseovers="stop()">
+    </td></tr>
+    <tr valign="top" align="center"><td>
+    &nbsp;<br><br>
+    </td></tr>
+    <tr valign="top" align="center"><td>
+    <img src="img/marble1.jpg" id="pic6" onmouseout="myfunction()" onmouseover="stop()">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <img src="img/marble1.jpg" onmouseout="myfunction()" onmouseover="stop()">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <img src="img/marble1.jpg" id="pic3" onmouseout="myfunction()" onmouseover="stop()">
+    </td></tr>
+    <tr valign="top" align="center"><td>
+    &nbsp;<br><br>
+    </td></tr>
+    <tr valign="top" align="center"><td>
+    <img src="img/marble1.jpg" id="pic5" onmouseout="myfunction()" onmouseover="stop()">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <img src="img/marble1.jpg" id="pic4" onmouseout="myfunction()" onmouseover="stop()">
+    </td></tr>
+    </tbody></table></div>
+    <button id="start" class="btn" onclick="myfunction()">START</button><br>
+    <button id="stop" class="btn" onclick="stop()">STOP</button>
+    </div>
+    <script>
+        var a=0
+        var timer;
+    function myfunction()
+    {
+        timer=setInterval('start()',200)
+    }    
+    function start()
+        {
+            ++a
+            if(a>6)
+            a=1
+            var s1="pic"+a
+            console.log(s1)
+            if(a==1)
+            var s2="pic6"
+            else
+            var s2="pic"+(a-1)
+            console.log(s2)
+            var element1=document.getElementById(s1)
+            element1.src="img/orange3.jpg"
+            var element2=document.getElementById(s2)
+            element2.src="img/marble1.jpg"
+        }
+    function stop(){
+        clearInterval(timer)
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS1</title>
+    <style>
+        img{
+            height:200px;
+            width:200px;
+        }
+    </style>
+</head>
+<body>
+        <img src="img/Very_sad_emoji_icon_png_large.png" id="img1" onmouseover="change(this,'img/smile.png')" onmouseout="change(this,'img/Very_sad_emoji_icon_png_large.png')">
+        <img src="img/Smiling_Face_with_Halo_large.png" id="img2" onmouseover="change(this,'img/Smiling_Devil_Emoji_compact.png')" onmouseout="change(this,'img/Smiling_Face_with_Halo_large.png')">
+        <img src="img/Emoji_Icon_-_Sunglasses_cool_emoji_large.png" id="img3" onmouseover="change(this,'img/smile-simple.png')" onmouseout="change(this,'img/Emoji_Icon_-_Sunglasses_cool_emoji_large.png')">
+    <script>
+        function change(obj,location)
+        {
+            obj.src= location
+        }
+    </script>
+</body>
+</html>

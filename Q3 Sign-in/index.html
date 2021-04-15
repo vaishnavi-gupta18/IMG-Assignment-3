@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-in</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="content">
+        <div class="container">
+            <div class="head"><h1>SIGN IN</h1></div>
+            <form name="signin" id="form" method="post" onsubmit="validate(); return false;" >
+                <div class="form">
+                <div class="item" id="femail">
+                    <label for="email">Email :</label>
+                    <input id="email" name="email">
+                    <div class="ferror"></div>
+                </div>
+                <div class="item" id="fpassword">
+                    <label for="password">Password :</label>
+                    <input id="password" name="password" type="password">
+                    <div class="ferror"></div>
+                </div>
+                    <input type="submit" value="Sign In" id="btn">
+            </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

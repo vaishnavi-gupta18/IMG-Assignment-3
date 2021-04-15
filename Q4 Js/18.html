@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS1</title>
+    <style>
+        .content{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body onunload="wclose()">
+    <div class="content">
+    <img src="https://res.cloudinary.com/teepublic/image/private/s--KcwC4U4y--/t_Resized%20Artwork/c_fit,g_north_west,h_954,w_954/co_191919,e_outline:48/co_191919,e_outline:inner_fill:48/co_ffffff,e_outline:48/co_ffffff,e_outline:inner_fill:48/co_bbbbbb,e_outline:3:1000/c_mpad,g_center,h_1260,w_1260/b_rgb:eeeeee/c_limit,f_auto,h_630,q_90,w_630/v1511926939/production/designs/2116325_1.jpg" onclick="wopen()">
+    <input type="submit" value="CLOSE" onclick="wclose()">
+    </div>
+    <script>
+        var Window=[]
+        function wopen()
+        {
+            Window[0]=window.open('https://www.google.com', "1","height=300,width=300,left=50,top=50")
+            Window[1]=window.open('https://www.google.com', "2","height=300,width=300,left=1100,top=50")
+            Window[2]=window.open('https://www.google.com', "3","height=300,width=300,left=50,top=1000")
+            Window[3]=window.open('https://www.google.com', "4","height=300,width=300,left=1100,top=1000")
+            Window[4]=window.open('https://www.google.com', "5","height=300,width=300,left=550,top=250")
+        }
+        function wclose()
+        {
+            Window.close()
+        }
+    </script>
+</body>
+</html>
