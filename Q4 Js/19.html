@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onLoad="doCookie()">
+    <div id="visit"></div>
+    <script>
+        cookie_name = "Counter_Cookie";
+        function doCookie() {
+        if(document.cookie)
+        {
+            index = document.cookie.indexOf(cookie_name);
+        }
+        else
+        {
+            index = -1;
+        }
+        var expiry = new Date();
+        fun(expiry)
+        expiry.setTime(expiry.getTime()+(365*24*60*60*1000));
+        if (index == -1)
+        {document.cookie=cookie_name+"=1; expires=" + expiry;}
+        else
+        {
+        countbegin = (document.cookie.indexOf("=", index) + 1);
+        countend = document.cookie.indexOf(";", index);
+        if (countend == -1) {
+        countend = document.cookie.length;
+        }
+        count = eval(document.cookie.substring(countbegin, countend)) + 1;
+
+        document.cookie=cookie_name+"="+count+"; expires=" + expiry;
+        }
+        }
+        function gettimes() {
+            if(document.cookie) {
+            index = document.cookie.indexOf(cookie_name);
+            if (index != -1) {
+            countbegin = (document.cookie.indexOf("=", index) + 1);
+            countend = document.cookie.indexOf(";", index);
+            if (countend == -1) {
+            countend = document.cookie.length;
+            }
+            count = document.cookie.substring(countbegin, countend);
+            return count;
+    }
+    }
+    return 0;
+    }   
+    function fun(t){
+    if(gettimes()==0)
+    document.getElementById('visit').innerHTML="You have never visited before"
+    else 
+    document.getElementById('visit').innerHTML="You have visited "+gettimes()+" number of times <br> You last visited on "+t+""
+    }
+    </script>
+</body>
+</html>
