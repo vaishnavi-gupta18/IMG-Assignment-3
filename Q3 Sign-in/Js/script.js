@@ -44,16 +44,15 @@ function req()
     var password1=document.getElementById('password')
     let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
-        if (this.readyState === 4 && this.status === 200) {
-            let response = JSON.parse(this.response);
-            alert("Form submitted with Json" + response["token"]);
+        if(this.readyState == 4){
+            if (this.status == 200) {
+                let response = JSON.parse(this.response);
+                alert("Form submitted with Json token " + response["token"]);
+            }
+            else if(this.status != 200){
+                alert("Error "+this.status+" occured!")}
         }
-        else if(this.status===404)
-        alert("Error 404! Page not found!");
-        else if(this.status===400)
-        alert("Error 400! Bad request!");
     }
-    
     xhttp.open("POST", "https://reqres.in/api/login", true);
     xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded'); 
     xhttp.send(`email=${email1.value}&password=${password1.value}`);
