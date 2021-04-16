@@ -16,7 +16,7 @@ var pat=[]
 function name_val(){
     clearErrors("name")
     var name = document.forms['signup']["fname"].value;
-    pat[0]=/[A-Za-z\s\'\.]/
+    pat[0]=/^[\w'.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*()\^{}|~<>;:[\]]{1,}$/
     if(name.length==0)
     {
         seterror("name","*Name cannot be empty");
@@ -31,7 +31,7 @@ function name_val(){
 function phno_val(){
     clearErrors("phno")
     var phno = document.forms['signup']["fphno"].value;
-    pat[1]=/(\+91)?-?(6|7|8|9)\d{9}/
+    pat[1]=/^(\+91[\-\s]?)?(91[\-\s]?)?[0]?(91)?(6|7|8|9)\d{9}/
     if(phno.length==0)
     {
         seterror("phno","*Phone number cannot be empty");
